@@ -22,7 +22,7 @@ const currentPause = function () {
 try {
   currentPause();
 } catch (error) {
-  console.log('Watching time is 0 seconds');
+  console.log('Ви ще не переглядали це відео');
 }
 
 player.on('timeupdate', throttle(timeOfPause, 1000));
