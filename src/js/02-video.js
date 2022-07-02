@@ -12,8 +12,6 @@ const timeOfPause = function (timeupdate) {
   localStorage.setItem(CURRENT_TIME_KEY, currentTime);
 };
 
-player.on('pause', timeOfPause);
-
 const currentPause = function () {
   const localTime = localStorage.getItem(CURRENT_TIME_KEY);
   const timeForPlay = JSON.parse(localTime);
