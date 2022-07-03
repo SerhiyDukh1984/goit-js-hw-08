@@ -29,12 +29,15 @@ function onFormSubmit(e) {
   console.log(formData);
 }
 
-function isLocalStorageInfo(e) {
+function isLocalStorageInfo() {
   const savedInfo = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY));
 
   if (savedInfo) {
     input.value = savedInfo.email;
     textarea.value = savedInfo.message;
     console.log(savedInfo);
+    return;
   }
+  input.value = '';
+  textarea.value = '';
 }
