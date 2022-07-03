@@ -10,7 +10,7 @@ form.addEventListener('input', throttle(onFormInput, 500));
 
 isLocalStorageInfo();
 
-formData = {};
+const formData = {};
 
 function onFormInput(e) {
   const value = e.target.value;
