@@ -10,7 +10,10 @@ form.addEventListener('input', throttle(onFormInput, 500));
 
 isLocalStorageInfo();
 
-const formData = {};
+const formData = {
+  email: `${input.value}`,
+  message: `${textarea.value}`,
+};
 
 function onFormInput(e) {
   const value = e.target.value;
@@ -33,7 +36,7 @@ function isLocalStorageInfo() {
   const savedInfo = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY));
 
   if (savedInfo) {
-    input.value = savedInfo.email || '';
-    textarea.value = savedInfo.message || '';
+    input.value = savedInfo.email;
+    textarea.value = savedInfo.message;
   }
 }
