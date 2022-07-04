@@ -33,8 +33,7 @@ function isLocalStorageInfo() {
   const savedInfo = JSON.parse(localStorage.getItem(LOCALSTORAGE_KEY));
 
   if (savedInfo) {
-    input.value = savedInfo.email;
-    textarea.value = savedInfo.message;
-    console.log(savedInfo);
+    input.value = savedInfo.email || '';
+    textarea.value = savedInfo.message || '';
   }
 }
