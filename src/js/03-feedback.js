@@ -38,5 +38,10 @@ function isLocalStorageInfo() {
   if (savedInfo) {
     input.value = savedInfo.email;
     textarea.value = savedInfo.message;
+
+    formData = {
+      email: '',
+      message: '',
+    };
   }
 }
